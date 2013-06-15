@@ -7,6 +7,7 @@ gem 'rails', '3.2.9'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2'
+gem 'cancan'
 gem 'rails_admin'
 gem 'paperclip', '~> 2.4'
 gem 'ckeditor'

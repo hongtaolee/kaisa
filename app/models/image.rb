@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-class Picture < ActiveRecord::Base
+class Image < ActiveRecord::Base
 
   mount_uploader :pic, ImageUploader
   attr_accessor :pic_cache, :remove_pic, :uploader_secure_token

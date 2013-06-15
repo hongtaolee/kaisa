@@ -9,6 +9,8 @@ RailsAdmin.config do |config|
 
   config.authorize_with :cancan
 
+  config.excluded_models = %w(Ckeditor::Asset Ckeditor::AttachmentFile Ckeditor::Picture)
+
   config.default_items_per_page = 50
   config.yell_for_non_accessible_fields = false
   

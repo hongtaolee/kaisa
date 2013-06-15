@@ -7,7 +7,7 @@ class Ability
     can :access, :rails_admin
     can :dashboard
     if user.role == 'admin'
-      can :manage, [AdPosition, Block, FocusImage, FriendLink, Navigation, PageBlock, Page, Picture, Setting, TourCategory, Tour, User]
+      can :manage, [AdPosition, Block, FocusImage, FriendLink, Navigation, PageBlock, Page, Image, Setting, TourCategory, Tour, User]
     end
   end
   

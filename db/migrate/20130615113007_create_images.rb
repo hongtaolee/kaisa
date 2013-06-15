@@ -1,6 +1,6 @@
 class CreatePictures < ActiveRecord::Migration
   def change
-    create_table :pictures do |t|
+    create_table :images do |t|
       t.string :name
       t.string :pic
       t.integer :position, :default => 0
