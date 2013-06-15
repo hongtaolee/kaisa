@@ -1,0 +1,5 @@
+zh_cn:
+  simple_captcha:
+    message:
+      default: "您输入的验证码有误"
+      user: "您输入的验证码有误"

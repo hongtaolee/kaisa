@@ -1,0 +1,35 @@
+zh_cn:
+  activerecord:
+    enums:
+      Order:              # the Model, as User.class.name.underscore
+        pay_types:         # pluralized version of :gender
+          nonpay: 未支付
+          alipay: 支付宝
+      Tag:
+        statuses:
+          online: 上线
+          offline: 下线
+      Ticket:
+        ticket_states:
+          normal: 正常
+          online: 上线
+          offline: 下线
+          unvalid: 无效
+      Page:
+        page_states:
+          our: 内链
+          other: 外链
+      Typee:
+        statuses:
+          offline: 下线
+          online: 上线
+      Plan:
+        statuses:
+          offline: 下线
+          online: 上线
+      Tour:
+        statuses:
+          offline: 下线
+          online: 上线   
+          
+          

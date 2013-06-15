@@ -1,0 +1,137 @@
+zh_cn:
+  home:
+    name: 主页
+  views:
+    pagination:
+      previous: "&laquo; 上一页"
+      next: "下一页· &raquo;"
+      truncate: "…"
+  admin:
+    home:
+      name: HOME
+    misc:
+      search: "查找"
+      filter: "筛选条件"
+      refresh: "刷新"
+      show_all: "显示全部"
+      add_filter: "添加筛选条件"
+      bulk_menu_title: "选择项目"
+      remove: "删除"
+      add_new: "新建任务"
+      chosen: "选择 %{name}"
+      chose_all: "选择所有"
+      clear_all: "清除所有"
+      up: "上移"
+      down: "下移"
+      navigation: "导航"
+      log_out: "登出"
+      ago: "以前"
+    flash:
+      successful: "%{name} 成功 %{action}"
+      error: "%{name} 加载 %{action} 失败 "
+      noaction: "没有采取任何措施"
+      model_not_found: "没有找到'%{model}'类"
+      object_not_found: "%{model}和键:'%{id}'没有被找到"
+    table_headers:
+      model_name: "模型名称"
+      last_used: "最后使用"
+      records: "记录"
+      username: "用户"
+      changes: "更改"
+      created_at: "日期/时间"
+      item: "项目"
+      message: "消息"
+    actions:
+      dashboard:
+        title: "网站管理员"
+        menu: "主页"
+        breadcrumb: "主页"
+      index:
+        title: "%{model_label_plural}的列表"
+        menu: "列表"
+        breadcrumb: "%{model_label_plural}"
+      show:
+        title: " %{model_label} '%{object_label}' 的描述"
+        menu: "显示"
+        breadcrumb: "%{object_label}"
+      show_in_app:
+        menu: "在应用程序中显示"
+      new:
+        title: "新的%{model_label}"
+        menu: "创建"
+        breadcrumb: "新建"
+        link: "创建 %{model_label}"
+        done: "创建了"
+      edit:
+        title: "编辑 %{model_label} '%{object_label}'"
+        menu: "编辑"
+        breadcrumb: "编辑"
+        link: "编辑这个 %{model_label}"
+        done: "更新了"
+      delete:
+        title: "删除 %{model_label} '%{object_label}'"
+        menu: "删除"
+        breadcrumb: "删除"
+        link: "删除 '%{object_label}'"
+        done: "删除了"
+      bulk_delete:
+        title: "删除 %{model_label_plural}"
+        menu: "复杂的删除"
+        breadcrumb: "复杂的删除"
+        bulk_link: "删除已选择的 %{model_label_plural}"
+      export:
+        title: "导出 %{model_label_plural}"
+        menu: "导出"
+        breadcrumb: "导出"
+        link: "导出 %{model_label_plural}"
+        bulk_link: "导出已选择的 %{model_label_plural}"
+        done: "导出了"
+      history_index:
+        title: " %{model_label_plural} 的历史" 
+        menu: "历史"
+        breadcrumb: "历史"
+      history_show:
+        title: "%{model_label} '%{object_label}' 的历史"
+        menu: "历史"
+        breadcrumb: "历史"
+      confirm:
+        title: "填写提交 %{model_label} '%{object_label}'"
+        menu: "填写订单"
+        breadcrumb: "填写订单"
+        link: "填写订单 %{model_label}"
+        done: "提交了"
+    form:
+      cancel: "取消"
+      basic_info: "基本信息"
+      required: "必须填写"
+      optional: "可选"
+      one_char: "字符"
+      char_length_up_to: "最大字符长度是："
+      char_length_of: "字符长度为："
+      save: "保存"
+      save_and_add_another: "保存并添加另一个"
+      save_and_edit: "保存和编辑"
+      all_of_the_following_related_items_will_be_deleted: "? 下面相关的节点可能被删除或者被孤立:"
+      are_you_sure_you_want_to_delete_the_object: "你确定你想要删除 %{model_name}"
+      confirmation: "是的，我确定"
+      bulk_delete: "下面的对象将被删除，并可能会删除和它们依赖的对象:"
+      new_model: "%{name} (新建)"
+    export:
+      confirmation: "导出为 %{name}"
+      select: "选择需要导出的字段"
+      fields_from: "来自字段 %{name}"
+      fields_from_associated: "来自相关字段 %{name}"
+      display: "显示 %{name}: %{type}"
+      options_for: "%{name}的选项"
+      empty_value_for_associated_objects: "<empty>"
+      click_to_reverse_selection: '单击反选'
+      csv:
+        header_for_root_methods: "%{name}" # 'model' is available
+        header_for_association_methods: "%{name} [%{association}]"
+        encoding_to: "编码到"
+        encoding_to_help: "选择输出编码. 输入空讲保留目前的输入编码: (%{name})"
+        skip_header: "没有头信息"
+        skip_header_help: "不要输出头信息（无字段描述）"
+        default_col_sep: ","
+        col_sep: "栏目分隔"
+        col_sep_help: "默认的会留出空白 ('%{value}')" # value is default_col_sep

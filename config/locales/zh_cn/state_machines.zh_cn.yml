@@ -1,0 +1,28 @@
+zh_cn:
+  activerecord: 
+    state_machines:
+      states:
+        pending: 初始订单
+        wait_pay: 等待付款
+        wait_confirm: 等待确认
+        payed: 已付款
+        prepayed: 预付定金
+        canceled: 取消
+        apply_quiting: 申请退出
+        debt: 欠款
+        traveling: 已发团
+        complete: 完成
+      events:
+        commit: 提交
+        confirm: 核对确认
+        cancel: 取消
+        pay: 支付
+        apply_quit: 申请退团
+        travel: 发团
+        check_complete: 核对完成
+    errors:
+      messages:
+        # %{value} = attribute value, %{state} = Human state name
+        invalid_event: "订单状态 %{state} 不允许此操作"
+        # %{value} = attribute value, %{event} = Human event name, %{state} = Human current state name
+        invalid_transition: "为:%{state},不能%{event}"

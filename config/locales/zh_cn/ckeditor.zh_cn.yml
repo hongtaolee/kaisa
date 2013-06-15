@@ -1,0 +1,6 @@
+zh_cn:
+  ckeditor:
+    buttons:
+      upload: 上传
+      delete: 删除
+    confirm_delete: 确认删除
