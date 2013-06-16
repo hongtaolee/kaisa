@@ -1,0 +1,64 @@
+<div id="content">
+  <div class="aside">
+    <% @page.blocks.each do |block|%>
+    <%=raw block.content %>
+    <% end if !@page.blank? %>
+  </div>
+  <div class="main">
+    <% i = 0 %>
+    <% TourCategory.all.in_groups_of(2) do |group| %>
+    <% group.each do |tc|%>
+  	<div class="item">
+  		<div class="title">
+  			<div class="txt"><%=tc.name %></div>
+  			<div class="right"><a href="/tour_categories/<%=tc.id %>" title="" class="more"></a></div>
+  		</div>
+  		<div class="content">
+  			<ul class="link-list">
+          <% tour_category.tours.each do |tour|%>
+  				<li>
+  					<a href="/tours/<%=tour.id %>" title=""><%=tour.name %></a>
+  					<span class="time"><%=tour.typee %></span>
+  					<span class="price">￥<%=tour.price %></span>
+  				</li>
+          <% end %>
+  			</ul>
+  		</div>
+  	</div>
+    <% end %>
+  
+    <% i+= 1 %>
+    <% ap = AdPosition.find_by_code("ad#{i}") %>
+    <% if !ap.blank? %>
+  	<div class="ad">
+  		<a href="<%=ap.url %>" title=""><img src="<%=ap.pic.url('772x120') %>" width="772" height="120" /></a>
+  	</div>
+    <% end %>
+        
+    <% end %>
+	
+  	<div class="item max-item">
+  		<div class="title">
+  			<div class="txt">旅游图片</div>
+  		</div>
+  		<div class="content">
+  			<div class="list_carousel">
+  				<ul id="foo0">
+            <% Image.all.each do |image|%>
+  					<li>
+  						<img src="<%=image.pic.url('160x120')%>" alt="" /><br/>
+  						<%=image.name %>
+  					</li>
+            <% end %>
+  				</ul>
+  				<div class="clearfix"></div>
+  			</div>
+  			<script type="text/javascript" language="javascript">
+  			$(function() {
+  				$('#foo0').carouFredSel();
+  			});
+  			</script>
+  		</div>
+  	</div>
+  </div>
+</div>

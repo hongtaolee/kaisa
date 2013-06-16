@@ -1,0 +1,22 @@
+
+<div class="min-nav">
+	<div class="img"></div>当前位置：
+	<a href="/" title="">首页</a>&gt;&gt;
+	<a href="/tour_categories/<%=@tour_category.id %>" title=""><%=@tour_category.name %></a>&gt;&gt;
+	<a href="/tours/<%=@tours.id %>" title=""><%=@tour.name %></a>
+</div>
+
+<div id="content" class="show-content">
+	<div class="aside">
+    <% @page.blocks.each do |block|%>
+    <%=raw block.content %>
+    <% end if !@page.blank? %>
+	</div>
+	<div class="main">
+		<h1>
+			<%=@tour.name %>
+			<strong>￥<%=@tour.price %>元</strong>
+		</h1>
+    <%=raw @tour.content %>
+	</div>
+</div>

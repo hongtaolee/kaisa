@@ -5,20 +5,77 @@ zh_cn:
     models: {}
   activerecord:
     models:
-      setting: 基本设置
+      ad_position: 广告位
+      block: 内容块
       focus_image: 焦点图
       friend_link: 友情链接
+      image: 图片
+      navigation: 导航
+      page_block: 页面-内容块
+      page: 页面
+      setting: 基本设置
+      tour_category: 线路分类
+      tour: 线路
       user: 管理员
+      article: 文章
     attributes:
-      setting:
-        title: 站点
-        header: 网站头部
-        footer: 网站底部
+      ad_position:
+        code: 编码
+        name: 名称
+        pic: 图片
+      block:
+        name: 名称
+        content: 内容
+        deleted_at: 删除于
       focus_image:
         name: 名称
         url: 网址
         pic: 图片
         position: 序号
+        deleted_at: 删除于
+      friend_link:
+        name: 名称
+        pic: 图片
+        position: 序号
+        deleted_at: 删除于
+      image:
+        name: 名称
+        pic: 图片
+        position: 序号
+        deleted_at: 删除于
+      navigation:
+        name: 名称
+        url: URL
+        position: 序号
+      page_block:
+        page: 页面
+        block: 内容块
+        position: 序号
+        deleted_at: 删除于
+      page:
+        name: 名称
+        url_pattern: URL匹配
+        page_blocks: 页面块
+      setting:
+        title: 站点
+        header: 网站头部
+        footer: 网站底部
+      tour_category:
+        name: 名称
+        weight: 权重
+        deleted_at: 删除于
+      tour:
+        name: 名称
+        tour_category: 线路分类
+        price: 价格
+        content: 内容
+        weight: 权重
+        deleted_at: 删除于
+        is_hot: 热门
+        is_recommend: 推荐
+      article:
+        title: 标题
+        content: 内容
       user:
         email: 邮箱
         role: 角色

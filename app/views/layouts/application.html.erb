@@ -1,14 +1,69 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>Kaisa</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title><%=Setting.title %></title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />  	
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="container">
+	<div id="top-ad"><%=raw Setting.header %></div>
+	<div id="nav">
+		<ul>
+      <% Navigation.all.each do |nav|%>
+			<li><a href="<%=nav.url %>" title="<%=nav.name %>"><%=nav.name %></a></li>
+      <% end %>
+		</ul>
+	</div>
 
-<%= yield %>
+	<script type="text/javascript">
+	jQuery(function($) {
+		$("#top-banner").KinSlideshow({
+			moveStyle:"up",
+			intervalTime:4,
+			mouseEvent:"mouseover",
+			isHasTitleBar:false,
+			isHasTitleFont:false,
+			titleBar:{titleBar_height:30,titleBar_bgColor:"#000000"},
+			titleFont:{TitleFont_size:14,TitleFont_color:"#fff"},
+			btn:{btn_bgColor:"#fff",btn_bgHoverColor:"#FF6600",
+			btn_fontColor:"#000",btn_fontHoverColor:"#fff",btn_fontFamily:"Verdana",
+			btn_borderColor:"#fff",btn_borderHoverColor:"#FF6600",
+			btn_borderWidth:1,btn_bgAlpha:1}
+		});
+	});
+	</script>
+	<div id="top-banner" style=" visibility: visible;width:980px;height:240px; ">
+    <% FocusImage.all.each do |fi|%>
+		<a href="<%=fi.url %>" title="<%=fi.name %>"><img src="<%=fi.pic.url('980x240')%>" width="980" height="240" /></a>
+    <% end %>
+	</div>
+  
+  <%= yield %>
+	
+	<table id="link" cellpadding="0" cellspacing="0">
+		<tr>
+			<td rowspan="2">友情链接</td>
+      <% fsize = FriendLink.count %>
+      <% FriendLink.limit(fsize / 2).each do |fl|%>
+			<td><a href="<%=fl.url%>"><img src="<%=fl.pic.url('88x31')%>%>" alt="<%=fl.name%>" /></a></td>
+      <% end %>
+		</tr>
+		<tr>
+      <% FriendLink.limit(fsize - (fsize / 2)).offset((fsize/2)).each do |fl|%>
+			<td><a href="<%=fl.url %>"><img src="<%=fl.pic.url('88x31')%>%>" alt="<%=fl.name%>" /></a></td>
+      <% end %>
+		</tr>
+	</table>
+	<!--begin: footer-->
+	<div id="footer">
+    <%=raw Setting.footer %>
+	</div>
+</div>
 
 </body>
 </html>

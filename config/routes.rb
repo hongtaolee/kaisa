@@ -1,4 +1,12 @@
 Kaisa::Application.routes.draw do
+  get "tour_categories/show"
+
+  get "articles/show"
+
+  get "tours/show"
+
+  get "index/index"
+
   mount Ckeditor::Engine => '/ckeditor'
 
   devise_for :users
@@ -54,7 +62,7 @@ Kaisa::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'index#index'
 
   # See how all your routes lay out with "rake routes"
 
