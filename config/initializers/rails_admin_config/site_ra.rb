@@ -39,12 +39,13 @@ RailsAdmin.config do |config|
     weight -998
     
     list do
-      fields :code, :name, :pic
+      fields :code, :name, :pic, :url
     end
     
     edit do
       field :code
       field :name
+      field :url
       field :pic, :carrierwave
     end
   end
@@ -70,12 +71,13 @@ RailsAdmin.config do |config|
     weight -996
     
     list do
-      fields :name, :pic, :position
+      fields :name, :pic, :position, :url
     end
     
     edit do
       field :name
       field :position
+      field :url
       field :pic, :carrierwave
     end
   end  
@@ -170,6 +172,7 @@ RailsAdmin.config do |config|
       field :weight
       field :is_hot
       field :is_recommend
+      field :typee
       field :content do
         ckeditor true
       end

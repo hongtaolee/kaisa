@@ -9,5 +9,5 @@ class FriendLink < ActiveRecord::Base
     
   default_scope order: "position ASC"
   
-  validates_presence_of :name, :pic, :position
+  validates_presence_of :name, :pic, :position, :url
 end

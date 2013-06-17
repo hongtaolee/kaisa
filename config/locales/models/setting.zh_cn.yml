@@ -23,6 +23,7 @@ zh_cn:
         code: 编码
         name: 名称
         pic: 图片
+        url: 链接地址
       block:
         name: 名称
         content: 内容
@@ -37,6 +38,7 @@ zh_cn:
         name: 名称
         pic: 图片
         position: 序号
+        url: 链接地址
         deleted_at: 删除于
       image:
         name: 名称
@@ -73,6 +75,7 @@ zh_cn:
         deleted_at: 删除于
         is_hot: 热门
         is_recommend: 推荐
+        typee: 发团类型
       article:
         title: 标题
         content: 内容

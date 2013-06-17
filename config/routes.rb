@@ -1,12 +1,11 @@
 Kaisa::Application.routes.draw do
-  get "tour_categories/show"
-
-  get "articles/show"
-
-  get "tours/show"
+  
+  resources :tours
+  resources :tour_categories
+  resources :articles
 
   get "index/index"
-
+  
   mount Ckeditor::Engine => '/ckeditor'
 
   devise_for :users

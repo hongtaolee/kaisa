@@ -7,5 +7,5 @@ class Tour < ActiveRecord::Base
   belongs_to :tour_category
   default_scope order: "weight ASC"
   
-  validates_presence_of :name, :tour_category_id, :price, :content, :weight
+  validates_presence_of :name, :tour_category_id, :price, :content, :weight, :typee
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130616082222) do
+ActiveRecord::Schema.define(:version => 20130616132507) do
 
   create_table "ad_positions", :force => true do |t|
     t.string   "name"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 20130616082222) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "code"
+    t.string   "url"
   end
 
   create_table "articles", :force => true do |t|
@@ -70,6 +71,7 @@ ActiveRecord::Schema.define(:version => 20130616082222) do
     t.datetime "deleted_at"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "url"
   end
 
   create_table "images", :force => true do |t|
@@ -145,6 +147,7 @@ ActiveRecord::Schema.define(:version => 20130616082222) do
     t.datetime "updated_at",                                                         :null => false
     t.boolean  "is_hot",                                          :default => false
     t.boolean  "is_recommend",                                    :default => false
+    t.string   "typee"
   end
 
   create_table "users", :force => true do |t|
