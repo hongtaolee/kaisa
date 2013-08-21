@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 # thumb -- ckeditor 使用
-IMAGE_UPLOADER_ALLOW_IMAGE_VERSION_NAMES = ['88x31','160x120','980x240','772x120']
+IMAGE_UPLOADER_ALLOW_IMAGE_VERSION_NAMES = ['88x31','160x120','980x240','772x120','800']
 UPLOAD_URL = "blanks"
 class ImageUploader < CarrierWave::Uploader::Base
   storage :upyun
